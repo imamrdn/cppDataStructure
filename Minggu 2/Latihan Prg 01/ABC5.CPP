@@ -1,5 +1,5 @@
-
 #include<iostream.h>
+using namespace std;
 
 template<class T>
 T Abc(const T& a, const T& b,
