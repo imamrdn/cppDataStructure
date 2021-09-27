@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int Abc(int a, int b, int c)
