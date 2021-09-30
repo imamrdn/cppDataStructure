@@ -5,12 +5,12 @@
 #include <stdlib.h>
 using namespace std;
 
-enum sign {plus, minus};
+enum sign {plust, minust};
 
 class Currency {
    public:
       // constructor
-      Currency(sign s = plus, unsigned long d = 0,
+      Currency(sign s = plust, unsigned long d = 0,
                               unsigned int c = 0);
       // destructor
       ~Currency() {}
@@ -50,8 +50,8 @@ bool Currency::Set(sign s, unsigned long d,
    
 bool Currency::Set(float a)
 {// Reset value.
-   if (a < 0) {sgn = minus; a = -a;}
-   else sgn = plus;
+   if (a < 0) {sgn = minust; a = -a;}
+   else sgn = plust;
    dollars = a; // extract integer part
    // get two decimal digits
    cents = (a + 0.001 - dollars) * 100;
@@ -64,17 +64,17 @@ Currency Currency::Add(const Currency& x) const
    Currency ans;
    // convert invoking object to signed integers
    a1 = dollars * 100 + cents;
-   if (sgn == minus) a1 = -a1;
+   if (sgn == minust) a1 = -a1;
    
    // convert x to signed integer
    a2 = x.dollars * 100 + x.cents;
-   if (x.sgn == minus) a2 = -a2;
+   if (x.sgn == minust) a2 = -a2;
    
    a3 = a1 + a2;
     
    // convert to currency representation
-   if (a3 < 0) {ans.sgn = minus; a3 = -a3;}
-   else ans.sgn = plus;
+   if (a3 < 0) {ans.sgn = minust; a3 = -a3;}
+   else ans.sgn = plust;
    ans.dollars = a3 / 100;
    ans.cents = a3 - ans.dollars * 100;
    
@@ -89,7 +89,7 @@ Currency& Currency::Increment(const Currency& x)
 
 void Currency::Output() const
 {// Output currency value.
-   if (sgn == minus) cout << '-';
+   if (sgn == minust) cout << '-';
    cout << '$' << dollars << '.';
    if (cents < 10) cout << "0";
    cout << cents;

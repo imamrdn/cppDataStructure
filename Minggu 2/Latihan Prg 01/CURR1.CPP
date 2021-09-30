@@ -5,8 +5,8 @@
 
 int main(void)
 {
-   Currency g, h(plus, 3, 50), i, j;
-   g.Set(minus, 2, 25);
+   Currency g, h(plust, 3, 50), i, j;
+   g.Set(minust, 2, 25);
    i.Set(-6.45);
    j = h.Add(g);
    j.Output(); cout << endl;
