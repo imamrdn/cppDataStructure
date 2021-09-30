@@ -3,10 +3,9 @@
 
 #include <iostream>
 #include <stdlib.h>
-using namespace std;
 
 enum sign {plust, minust};
-
+using namespace std;
 class Currency {
    public:
       // constructor

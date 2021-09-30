@@ -1,9 +1,7 @@
-// test currency class
-
 #include <iostream>
-#include "curr1.h"
+#include "CURR1.H"
 
-int main(void)
+int main()
 {
    Currency g, h(plust, 3, 50), i, j;
    g.Set(minust, 2, 25);
@@ -17,4 +15,5 @@ int main(void)
    j = i.Increment(g).Add(h);
    j.Output(); cout << endl;
    i.Output(); cout << endl;
+   return 0;
 }

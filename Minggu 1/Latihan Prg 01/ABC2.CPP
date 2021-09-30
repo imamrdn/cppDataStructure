@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream>
 using namespace std;
 
 float Abc(float a, float b, float c)
@@ -9,5 +9,6 @@ float Abc(float a, float b, float c)
 int main(void)
 {
    cout << Abc(2,3,4) << endl;
+   return 0;
 }
 

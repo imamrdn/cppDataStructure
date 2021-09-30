@@ -5,6 +5,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "xcept.h"
+using namespace std;
 
 enum sign {plust, minust};
 

@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream>
 using namespace std;
 
 template<class T>
@@ -11,5 +11,6 @@ int main(void)
 {
    int a = 2, b = 3, c = 4;
    cout << Abc(a,b,c) << endl;
+   return 0;
 }
 

@@ -3,8 +3,8 @@
 #ifndef Xcept_
 #define Xcept_
 
-#include <exception>
-#include <new>
+#include<iostream>
+#include <new.h>
 
 // bad initializers
 class BadInitializers {
@@ -24,7 +24,7 @@ void my_new_handler()
    throw NoMem();
 };
 
-// new_handler Old_Handler_ = set_new_handler(my_new_handler);
+//new_handler, Old_Handler_ = set_new_handler(my_new_handler);
 
 // improper array, find, insert, or delete index
 // or deletion from empty structure

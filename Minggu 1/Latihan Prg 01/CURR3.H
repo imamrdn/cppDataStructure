@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <stdlib.h>
-
+using namespace std;
 enum sign {plust, minust};
 
 class Currency {
