@@ -35,21 +35,25 @@ int main(){
 	cout<<"Data A: "; cin >> sum.a;
 	cout<<"Data B: "; cin >> sum.b;
 	
-	
 	sum.index = 0;
 	sum.aString = changeStr(sum.a);
 	sum.bString = changeStr(sum.b);
 
 	int lenghtA = sum.aString.length();
 	int lenghtB = sum.bString.length();
-
+	
+	cout<<"\nArray A = ";
 	for (int i=0; i<lenghtA; i++) {
 		sum.arrA[i] = changeInt(sum.aString[i]);
+		cout<<sum.arrA[i]<<" ";
 	}
 
+	cout<<"\nArray B = ";
 	for (int i=0; i<lenghtB; ++i) {
 		sum.arrB[i] = changeInt(sum.bString[i]);
+		cout<<sum.arrB[i]<<" ";
 	}
+
 
 	if (lenghtA >= lenghtB) {
 		for (int i = lenghtA-1; i >= 0; i--) {
@@ -72,7 +76,7 @@ int main(){
 		}
 	}
 
-	cout << "Hasil : ";
+	cout <<"\nHasil = ";
 	for (int i = sum.index-1; i>=0; i--) {
 		cout << sum.arrC[i] << " ";
 	}
