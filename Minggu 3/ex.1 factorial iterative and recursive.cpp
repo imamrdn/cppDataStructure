@@ -9,20 +9,21 @@ class factorial	{
 		int n, reply, fact;
 	
 	public :
-		void header();
 		void input();
 		int iterative();
 		int recursive(int n);
 };
 
-void factorial::header(){
+istream& operator >> (istream& in, factorial& f){
 	cout<<"Program Menghitung Faktorial\n";
 	cout<<"============================\n";
 	cout<<"1. Metode Iteratif\n";
 	cout<<"2. Metode Rekursif\n";
 	cout<<"============================\n";	
 	cout<<"Masukkan pilihan anda (1/2) = ";
-	cin>>reply;
+	in>>f.reply;
+	
+	return in;
 }
 
 void factorial::input(){
@@ -48,12 +49,9 @@ int factorial::recursive(int n)	{
 };
 
 ostream& operator << (ostream& out, factorial& f){
-	f.header();
 	if (f.reply==1){
-		f.input();
 		out<<"Hasil Iteratif dari "<<f.n<<"!"<<" adalah "<<f.iterative();
 	} else if (f.reply == 2){
-		f.input();
 		out<<"Hasil Rekursif dari "<<f.n<<"!"<<" adalah "<<f.recursive(f.n);
 	} else {
 		out<<"Perintah yang anda masukkan salah";
@@ -64,6 +62,8 @@ ostream& operator << (ostream& out, factorial& f){
 
 int main(){
 	factorial run;
+	cin>>run;
+	run.input();
 	cout<<run;
 	
 	return 0;
