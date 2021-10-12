@@ -39,5 +39,5 @@ int main(){
 	x.cetak_array();
 	x.kurang_satu();
 	cout<<"\nSetelah dikurangi 1 menjadi : "<<endl;
-	x.cetak_aray();
+	x.cetak_array();
 	}
