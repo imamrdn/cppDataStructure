@@ -7,7 +7,7 @@
 // tridiagonal matrix
 
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include "xcept.h"
 
 

@@ -1,9 +1,9 @@
 // test tridiagonal matrix class
 
-#include <iostream.h>
+#include <iostream>
 #include "tridiag.h"
 
-void main(void)
+int main(void)
 {
    TridiagonalMatrix<int> X(20);
    X.Store(22,1,1).Store(44,5,5).Store(0,8,5).Store(55,7,8);
