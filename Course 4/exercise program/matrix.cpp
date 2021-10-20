@@ -1,9 +1,9 @@
 // test matrix class
 
-#include <iostream.h>
+#include <iostream>
 #include "matrix.h"
 
-void main(void)
+int main(void)
 {
    try {
       Matrix<int> X(3,2), Y, Z;

@@ -1,12 +1,13 @@
 #ifndef Matrix_
 #define Matrix_
 
+#include <iostream>
 #include "xcept.h"
 
 template<class T>
 class Matrix {
-   friend ostream& operator<<
-          (ostream&, const Matrix<T>&);
+	template<class U>
+   friend ostream& operator<<(ostream&, const Matrix<U>&);
    public:
       Matrix(int r = 0, int c = 0);
       Matrix(const Matrix<T>& m); // copy constructor
