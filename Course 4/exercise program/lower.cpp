@@ -1,9 +1,9 @@
 // test lower triangular matrix class
 
-#include <iostream.h>
+#include <iostream>
 #include "lower.h"
 
-void main(void)
+int main(void)
 {
    LowerMatrix<int> X(20);
    X.Store(22,1,1).Store(44,5,3).Store(55,10,2).Store(0,8,5);

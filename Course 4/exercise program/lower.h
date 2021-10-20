@@ -5,7 +5,7 @@
 // lower triangle matrix
 
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 #include "xcept.h"
 
 template<class T>
