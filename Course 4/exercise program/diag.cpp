@@ -1,9 +1,9 @@
 // test diagonal matrix class
 
-#include <iostream.h>
+#include <iostream>
 #include "diag.h"
 
-void main(void)
+int main(void)
 {
    DiagonalMatrix<int> X(20);
    X.Store(22,1,1).Store(44,5,5).Store(0,8,5);
