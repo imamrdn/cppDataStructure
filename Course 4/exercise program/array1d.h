@@ -1,9 +1,6 @@
-
 #ifndef Array1D_
 #define Array1D_
-
 // One-dimensional arrays.
-
 #include <iostream>
 #include "xcept.h"
 using namespace std;

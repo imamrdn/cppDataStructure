@@ -1,9 +1,9 @@
 // test 2D array class
 
-#include <iostream.h>
+#include <iostream>
 #include "array2d.h"
 
-void main(void)
+int main(void)
 {
    try {
       int i, j;

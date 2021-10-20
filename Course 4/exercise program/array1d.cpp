@@ -5,8 +5,7 @@
 #include "array1d.h"
 using namespace std;
 
-int main()
-{
+int main() {
    try {
       Array1D<int> X(10), Y, Z;
       for (int i=0; i < 10; i++)

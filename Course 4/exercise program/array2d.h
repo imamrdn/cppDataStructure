@@ -6,8 +6,8 @@
 
 template<class T>
 class Array2D {
-   friend ostream& operator<<
-          (ostream&, const Array2D<T>&);
+	template<class U>
+   friend ostream& operator<<(ostream&, const Array2D<U>&);
    public:
       Array2D(int r = 0, int c = 0);
       Array2D(const Array2D<T>& m); // copy constructor
