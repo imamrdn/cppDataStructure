@@ -1,10 +1,7 @@
-// test 2D array class
-
 #include <iostream>
 #include "array2d.h"
 
-int main(void)
-{
+int main(void) {
    try {
       int i, j;
       Array2D<int> X(3,2), Y, Z;
@@ -27,7 +24,7 @@ cin >> i;
       cout << "-(Y + X) is" << endl;
       cout << -Z << endl;
       Array2D<int> W(2,3);
-      for (i = 0; i < 2; i++)
+      for (i = 0; i < 2; i++) 
          for (j = 0; j < 3; j++)
             W[i][j] = i + j;
       cout << "W is" << endl;
