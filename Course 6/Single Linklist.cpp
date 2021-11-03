@@ -138,6 +138,7 @@ int main() {
 	cout<<endl;
 	
 	My.tambahAkhir(6);
+	My.tambahAkhir(7);
 	My.cetak();
 	cout<<endl;
 	

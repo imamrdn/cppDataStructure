@@ -19,6 +19,7 @@ class LinkedList {   //2
     void cetak();
     void tambahAkhir(int);
     void tambahTengah(int);
+    void hapusBelakang();
 
 private:
     Node* first;
@@ -29,11 +30,13 @@ void LinkedList::nodeBaru(int A){   //4
 	Node *baru = new Node();
 	baru->data = A;
 	baru->berikut = NULL;  
-	if (first == NULL) {
+		
+	if(first == NULL){
 		first = baru;
 		baru->berikut = first; // ciri penting
+	
 	} else {
-        // pointer akhir menunjuk elemen terakhir
+		// pointer akhir menunjuk elemen terakhir
         Node* akhir = first;
         while(akhir->berikut != first)
           akhir = akhir->berikut;
@@ -42,15 +45,6 @@ void LinkedList::nodeBaru(int A){   //4
         baru->berikut = first;
         first = baru;  // pemilik circulaar link list
 	}
-	// tambahkan bagian ELSE dari IF	
-    // pointer akhir menunjuk elemen terakhir
-    Node* akhir = first;
-    while(akhir->berikut != first)
-      akhir = akhir->berikut;
-    // pointer berikut dari akhir SELALU ke baru/ciri 
-    akhir->berikut = baru;
-    baru->berikut = first;
-    first = baru;  // pemilik circulaar link list
 }
 
 // Langkah 5 
@@ -102,6 +96,21 @@ void LinkedList::tambahTengah(int C){
 	p->berikut = baru;
 }
 
+void LinkedList::hapusBelakang(){
+	if(first != NULL) {
+        if(first->berikut == first) {
+          first = NULL;
+        } else {
+			Node* temp = first;
+			while(temp->berikut->berikut != first)
+				temp = temp->berikut;
+			Node* lastNode = temp->berikut;
+			temp->berikut = first;
+			delete lastNode; 
+        }
+    }
+}
+
 int main(){
 	LinkedList My;  // deklarasi variabel My
 	My.nodeBaru(4); // Isi data node pertama 
@@ -109,7 +118,11 @@ int main(){
 	My.tambahAkhir(6);
 	My.tambahTengah(5);
 	My.cetak();
+	My.hapusBelakang();
+	cout<<"\nSetelah dihapus\n";
+	My.cetak();
+
 	
 	
-	std::cout << "Hello World!\n";
+	std::cout << "\nHello World!\n";
 }
